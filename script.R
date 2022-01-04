@@ -50,8 +50,8 @@ total = rbind(subtotal, data_4)
 ggplot(total) +
   geom_path(aes(x = Tensile_Strain, y = Tensile_Stress, color = trial), size = 1) +
   scale_color_manual(name = "Trial",
-                     limits = c("1", "2", "3"),
-                     values = c("#006699", "#6EB43F", "#073949")) +
+                     limits = c("1", "3", "4"),
+                     values = c("#D47500", "#6EB43F", "#073949")) +
   labs(x = "Strain", y = "Stress (kPa)") +
   scale_x_continuous(limits = c(0,0.80), n.breaks = 5, labels = scales::percent) +
   theme_classic() +
