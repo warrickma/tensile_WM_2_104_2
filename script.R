@@ -52,8 +52,8 @@ ggplot(total) +
   scale_color_manual(name = "Trial",
                      limits = c("1", "3", "4"),
                      values = c("#D47500", "#6EB43F", "#073949")) +
-  labs(x = "Strain", y = "Stress (kPa)") +
-  scale_x_continuous(limits = c(0,0.80), n.breaks = 5, labels = scales::percent) +
+  labs(x = "Strain (mm/mm)", y = "Stress (kPa)") +
+  scale_x_continuous(limits = c(0,0.75), n.breaks = 4, labels = scales::percent) +
   theme_classic() +
   #annotate("text", x = 0.225, y = 225, label = "Trial 1", color = "#006699", size = 4, fontface = "bold") +
   #annotate("text", x = 0.2, y = 225, label = "Trial 2", color = "#6EB43F", size = 4, fontface = "bold") +
@@ -66,5 +66,5 @@ ggplot(total) +
     legend.title = element_text(size=10, color = "black", face = "bold"),
     legend.text = element_text(size=10, color = "black", face = "bold"),
     legend.position = "none")
-ggsave("tension.svg", width = 80, height = 80, units = "mm")
+ggsave("tension.svg", width = 50, height = 50, units = "mm")
 levels(processed$Cycle)
